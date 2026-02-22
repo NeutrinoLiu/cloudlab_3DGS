@@ -1,7 +1,7 @@
 # desktop gui =============================
 sudo apt update
 sudo apt upgrade -y
-sudo apt install xfce4 xrdp htop git tmux nano unzip -y
+sudo apt install xfce4 xrdp htop git tmux nano unzip zsh -y
 
 # install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
@@ -12,6 +12,7 @@ bash ./miniconda-installer.sh -u -b
 rm miniconda-installer.sh
 source ~/miniconda3/etc/profile.d/conda.sh
 conda init zsh
+conda init bash
 conda update -n base conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
